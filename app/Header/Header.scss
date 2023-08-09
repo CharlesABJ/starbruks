@@ -1,0 +1,49 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+  .logo {
+    width: 5%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  nav {
+    ul {
+      @include flexCenter();
+      list-style: none;
+      li {
+        a {
+          padding: 4px 15px;
+          border-radius: 20px;
+          text-decoration: none;
+          color: black;
+          transition: 0.3s all;
+        }
+        .nav-active {
+          background: #017143;
+          color: #fff;
+          &:hover {
+            background: #017143;
+            color: #fff;
+          }
+        }
+        :hover {
+          background: #01714243;
+          color: #fff;
+          transition: 0.3s all;
+        }
+        margin-inline: 5px;
+      }
+    }
+  }
+}
