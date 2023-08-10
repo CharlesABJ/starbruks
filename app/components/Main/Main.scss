@@ -1,0 +1,60 @@
+main {
+  position: relative;
+  height: calc(100vh - 90px);
+
+  section {
+    display: flex;
+
+    .presentation {
+      width: 50%;
+    }
+
+    .coffee-selected {
+      z-index: 2;
+      position: absolute;
+      border-radius: 50%;
+      display: flex;
+      width: 50%;
+      right: 0;
+      bottom: 5%;
+      align-items: center;
+
+      &.coffee-1 {
+        background: #017143;
+      }
+      &.coffee-2 {
+        background: #eb7495;
+      }
+      &.coffee-3 {
+        background: #d752b1;
+      }
+
+      div {
+        width: 50%;
+      }
+      img {
+        width: 400px;
+      }
+    }
+  }
+
+  .coffees-zone {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%, -5%);
+    z-index: 3;
+    img {
+      transition: 0.3s all;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.07);
+        transition: 0.3s all;
+      }
+      &.active-coffe {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

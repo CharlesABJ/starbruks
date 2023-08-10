@@ -1,0 +1,53 @@
+main {
+  position: relative;
+  height: calc(100vh - 90px);
+}
+main section {
+  display: flex;
+}
+main section .presentation {
+  width: 50%;
+}
+main section .coffee-selected {
+  z-index: 2;
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  width: 50%;
+  right: 0;
+  bottom: 5%;
+  align-items: center;
+}
+main section .coffee-selected.coffee-1 {
+  background: #017143;
+}
+main section .coffee-selected.coffee-2 {
+  background: #eb7495;
+}
+main section .coffee-selected.coffee-3 {
+  background: #d752b1;
+}
+main section .coffee-selected div {
+  width: 50%;
+}
+main section .coffee-selected img {
+  width: 400px;
+}
+main .coffees-zone {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translate(-50%, -5%);
+  z-index: 3;
+}
+main .coffees-zone img {
+  transition: 0.3s all;
+  cursor: pointer;
+}
+main .coffees-zone img:hover {
+  transform: scale(1.07);
+  transition: 0.3s all;
+}
+main .coffees-zone img.active-coffe {
+  transform: scale(1.1);
+}/*# sourceMappingURL=Main.css.map */
